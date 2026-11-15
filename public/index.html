@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Daniel Franco Portfolio</title>
+<meta name="description" content="AI projects and experience of Daniel Jehd Franco.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="sample-strip" class="sample-strip" hidden>Sample content. Your real projects go here before this goes live.</div>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span id="brand-name"></span></a>
+    <button id="menu-btn" class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#course">PDC60</a>
+      <a href="#path">Path</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="pill pill-light head-ask" type="button" data-open-chat>Ask my AI</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <canvas id="hero-grid" class="hero-grid" aria-hidden="true"></canvas>
+    <div class="wrap hero-inner">
+      <p class="hero-kicker"><span id="hero-role"></span></p>
+      <h1 id="hero-name" class="hero-name"></h1>
+      <p id="hero-tagline" class="hero-tagline"></p>
+      <div class="hero-foot">
+        <button class="bit-call" type="button" data-open-chat>
+          <span class="bit-bubble">Ask me anything about Daniel's work.</span>
+          <span class="bit bit-large" data-bit></span>
+        </button>
+        <p id="hero-intro" class="hero-intro"></p>
+        <a class="spin-badge" href="#about" aria-label="Scroll to about">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <defs><path id="badge-circle" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
+            <text><textPath href="#badge-circle">keep scrolling, keep scrolling, keep scrolling,</textPath></text>
+          </svg>
+          <span class="badge-dot" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-label="Skills"><div id="ticker-track" class="ticker-track"></div></div>
+
+  <section id="about" class="band-paper">
+    <div class="wrap about-grid">
+      <h2 class="sr-only">About</h2>
+      <p id="about-text" class="about-text"></p>
+      <dl id="stats" class="stats"></dl>
+    </div>
+  </section>
+
+  <section id="projects" class="band-ink">
+    <div class="wrap">
+      <h2 class="big-head">Things I've built</h2>
+      <div id="project-list" class="project-list"></div>
+    </div>
+  </section>
+
+  <section id="course" class="band-deep">
+    <div class="wrap">
+      <div class="course-head">
+        <div>
+          <p id="course-code" class="course-code"></p>
+          <h2 id="course-title" class="big-head"></h2>
+        </div>
+        <div class="course-side">
+          <p id="course-intro" class="course-intro"></p>
+          <a id="course-canva" class="pill pill-light" target="_blank" rel="noopener" hidden>Open the Canva portfolio</a>
+        </div>
+      </div>
+      <div id="module-list" class="module-list"></div>
+    </div>
+  </section>
+
+  <button class="outline-run" type="button" data-open-chat>
+    <span id="outline-track" class="outline-track"></span>
+  </button>
+
+  <section id="path" class="band-ink">
+    <div class="wrap">
+      <h2 class="big-head">How I got here</h2>
+      <ol id="journey" class="journey"></ol>
+    </div>
+  </section>
+
+  <section id="skills" class="band-deep">
+    <div class="wrap skills-grid">
+      <h2 class="big-head skills-head">What I work with</h2>
+      <div id="skill-list" class="skill-list"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="band-paper">
+    <div class="wrap contact">
+      <h2 id="contact-heading" class="contact-heading"></h2>
+      <p id="contact-text" class="contact-text"></p>
+      <div id="contact-actions" class="contact-actions"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-row">
+    <span id="foot-name"></span>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<button id="chat-launch" class="chat-launch" type="button" data-open-chat aria-label="Open chat with my AI">
+  <span class="bit" data-bit></span><span>Ask my AI</span>
+</button>
+
+<section id="chat" class="chat" role="dialog" aria-label="Chat with Daniel's portfolio assistant" hidden>
+  <div class="chat-head">
+    <span class="bit bit-small" data-bit></span>
+    <strong>Portfolio assistant</strong>
+    <button id="chat-close" class="chat-close" type="button">Close</button>
+  </div>
+  <div id="chat-log" class="chat-log" aria-live="polite"></div>
+  <div id="chat-suggest" class="chat-suggest"></div>
+  <form id="chat-form" class="chat-form">
+    <label class="sr-only" for="chat-input">Your question</label>
+    <textarea id="chat-input" rows="1" maxlength="600" placeholder="Ask about a project or skill"></textarea>
+    <button id="chat-send" class="chat-send" type="submit">Send</button>
+  </form>
+</section>
+
+<noscript><p class="noscript">This portfolio needs JavaScript to show its content.</p></noscript>
+<script src="app.js"></script>
+</body>
+</html>

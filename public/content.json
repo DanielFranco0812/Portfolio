@@ -1,0 +1,470 @@
+{
+  "sample": false,
+  "name": "Daniel Franco",
+  "fullName": "Daniel Jehd Franco",
+  "role": "IT student · Front-end and QA",
+  "tagline": "Front-end development, UI/UX and QA, from capstone systems to AI chatbots.",
+  "intro": "4th-year BSIT student at Angeles University Foundation, looking for an internship in front-end development or QA engineering.",
+  "about": "I'm a detail-oriented IT student with hands-on experience in UI/UX design, front-end development and MySQL databases. I work well in teams, research carefully, and write clear system documentation.",
+  "stats": [
+    {
+      "value": "04",
+      "label": "Projects on this site"
+    },
+    {
+      "value": "06",
+      "label": "Certifications and trainings"
+    },
+    {
+      "value": "08",
+      "label": "PDC60 modules completed"
+    }
+  ],
+  "marquee": [
+    "JavaScript",
+    "ReactJS",
+    "PHP",
+    "Laravel",
+    "Java",
+    "Flutter",
+    "MySQL",
+    "UI/UX design",
+    "Quality assurance",
+    "Prompt engineering"
+  ],
+  "banner": "Ask my AI about my work",
+  "projects": [
+    {
+      "title": "Athena AI",
+      "year": "2026",
+      "summary": "A chatbot for Infliction Gym in Magalang, Pampanga that answers members' questions and helps them book classes.",
+      "tags": [
+        "Chatbot",
+        "Knowledge base",
+        "QA"
+      ],
+      "details": "Final project for PDC60 (MC01, group chatbot), built by a team of four on free tools and free tiers. Athena answers from a knowledge base of the gym's real schedule, coaches, membership rates and hours, and links new members to registration. Members get answers and class bookings any time, not only when the front desk is open. Daniel's role was QA: testing Athena's answers and the website.",
+      "url": "",
+      "repo": "https://github.com/DanielFranco0812/Athena-AI-chatbot",
+      "image": "images/athena-ai-website.jpg"
+    },
+    {
+      "title": "Academic Workspace Study Agent",
+      "year": "2026",
+      "summary": "A Claude skill that organizes school files and turns lectures into study materials.",
+      "tags": [
+        "Agentic AI",
+        "Claude skill"
+      ],
+      "details": "Built for PDC60 Module 7 (Agentic AI). In ORGANIZE mode it sorted 4 inbox files into course folders with standard names, checked every copy against its original by checksum and logged the results. In STUDY mode it turned the ITE40 Week 13 Test Metrics slides into notes, 10 review questions with a separate answer key, and a study index. It inspects before acting, never deletes or overwrites a file, and waits for the exact phrase APPROVE ORGANIZATION before moving anything. A retest showed an instruction not to ask could make it guess, so its rule was rewritten to always ask the one question it needs.",
+      "url": "",
+      "repo": "",
+      "image": ""
+    },
+    {
+      "title": "TagWise: RFID Asset Management",
+      "year": "",
+      "summary": "Capstone project: a centralized hardware tracking system using RFID tags.",
+      "tags": [
+        "Capstone",
+        "Laravel",
+        "MySQL",
+        "RFID"
+      ],
+      "details": "Designed a centralized hardware tracking system using Snipe-IT (Laravel, PHP), MySQL and Zebra RFD40 tags. Created the foundational system architecture, including sitemaps and vertical UML use-case diagrams. Developed the project's brand identity and wrote the developmental research documentation.",
+      "url": "",
+      "repo": "",
+      "image": ""
+    },
+    {
+      "title": "Barangay Service Integration Platform",
+      "year": "",
+      "summary": "With Team Nexora: a platform that streamlines barangay services and incident reporting.",
+      "tags": [
+        "REST API",
+        "MySQL",
+        "Team project"
+      ],
+      "details": "Co-developed a REST API and MySQL-driven platform to streamline local barangay services and incident reporting. Built automated notification workflows (email, SMS, webhooks) and integrated external APIs. Wrote the technical guidelines, including sequence diagrams, API contracts and architecture analysis.",
+      "url": "",
+      "repo": "",
+      "image": ""
+    }
+  ],
+  "journey": [
+    {
+      "year": "2023",
+      "title": "Bachelor of Science in Information Technology",
+      "place": "Angeles University Foundation",
+      "text": "2023 to now. Capstone: TagWise, an RFID asset management system."
+    },
+    {
+      "year": "2021",
+      "title": "Senior High School",
+      "place": "Blooming Fields Academy Foundation Inc.",
+      "text": "2021 to 2023."
+    },
+    {
+      "year": "2011",
+      "title": "Elementary and Junior High School",
+      "place": "Blooming Fields Academy Foundation Inc.",
+      "text": "Elementary 2011 to 2017 and junior high 2018 to 2021, with a year of junior high at School of Saint Brother Benilde (2017 to 2018)."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Development",
+      "text": "Front-end and back-end development with Java, PHP, JavaScript, ReactJS, Laravel and Flutter."
+    },
+    {
+      "title": "Databases and architecture",
+      "text": "Relational database design in MySQL, system architecture, sitemaps, UML use-case and sequence diagrams, and API contracts."
+    },
+    {
+      "title": "UI/UX and quality assurance",
+      "text": "UI/UX design and brand identity, and applying QA principles to IT projects, including testing the Athena AI chatbot and website."
+    },
+    {
+      "title": "Conversational AI",
+      "text": "Prompt engineering frameworks, conversation design, retrieval-aware prompting, evaluating AI output for hallucinations, and building agents (PDC60)."
+    },
+    {
+      "title": "Certifications and training",
+      "text": "Cybersecurity Essentials (2026); Cyberhygiene Training Program, ACF-PH and PCCI (2026); Technopreneurship (2025); Introduction to Cybersecurity (2025); Switching, Routing, and Wireless Essentials (2025); Introduction to Networks (2024)."
+    }
+  ],
+  "contact": {
+    "heading": "Let's build something useful.",
+    "text": "I'm looking for an internship in front-end development or QA engineering. Download my CV or reach out.",
+    "email": "jehdfranco01@gmail.com",
+    "github": "https://github.com/DanielFranco0812",
+    "linkedin": "https://www.linkedin.com/in/daniel-jehd-franco-62a29028a/",
+    "cv": "Daniel_Jehd_Franco_CV.pdf"
+  },
+  "chat": {
+    "greeting": "Hi, I'm Daniel's portfolio assistant. Ask me about his projects and skills.",
+    "suggestions": [
+      "What has Daniel built?",
+      "What did he learn in PDC60?",
+      "What is Athena AI?"
+    ],
+    "extraNotes": "Hobbies: movies, video games, outdoor activities, UI/UX design and hardware troubleshooting."
+  },
+  "course": {
+    "code": "PDC60",
+    "title": "Conversational AI",
+    "intro": "What I did and learned in each module of PDC60: the activities, how my prompts improved, and what I took away.",
+    "canva": "https://canva.link/7vd9biqim88rqt4",
+    "modules": [
+      {
+        "title": "Introduction to Conversational AI",
+        "learned": [
+          "What conversational AI is and why it matters",
+          "From chatbots to LLM-based assistants",
+          "Core concepts: NLU and dialogue"
+        ],
+        "activities": [
+          {
+            "kind": "Assignment",
+            "title": "Assignment #1: Midterms",
+            "text": "Reflected on using ChatGPT, Gemini and Copilot, explained how LLMs differ from rule-based chatbots, mapped the conversational AI ecosystem, and proposed safeguards for a university AI assistant.",
+            "links": [
+              {
+                "label": "View full work",
+                "url": "https://docs.google.com/document/d/1IcdlsFMYfaT_dnIyqUDVil4AvgxM18ddAN4iUSo_hzM/edit?usp=sharing"
+              }
+            ]
+          },
+          {
+            "kind": "Lab Exercise 1",
+            "title": "Exploring and Comparing Modern Conversational AI Platforms",
+            "text": "Tested ChatGPT, Gemini and Claude with identical prompts, scored them on five criteria, and ran a basic vs detailed prompt experiment. ChatGPT ranked best overall for accuracy and instruction following.",
+            "links": [
+              {
+                "label": "View full work",
+                "url": "https://docs.google.com/document/d/1ZYe6dFMyDlXcdeJ0Bbd_jTAmoH1pyPbfoLcqUJhTjxk/edit?usp=sharing"
+              }
+            ]
+          },
+          {
+            "kind": "Lab Exercise 2",
+            "title": "AI Capability and Limitation Analysis",
+            "text": "Tested where AI succeeds and fails: ambiguous instructions, a false premise (\"Java was made by Microsoft\"), checking references for hallucinations, context memory, and the limits of AI advice.",
+            "links": [
+              {
+                "label": "View full work",
+                "url": "https://docs.google.com/document/d/1tHUHmwqBIlcKOyih5znMzxp0pgO4uSnmfcbyaOtSfYE/edit?usp=sharing"
+              }
+            ]
+          }
+        ],
+        "prompt": {
+          "source": "Lab Exercise 1, Part C: Prompt Modification Experiment",
+          "oldLabel": "Old prompt",
+          "old": "Tell me about cybersecurity.",
+          "newLabel": "New prompt",
+          "new": "You are explaining cybersecurity to first-year IT students with no professional cybersecurity experience. In 200 words or fewer, explain what cybersecurity is, give three common cybersecurity threats, and provide one real-world example for each. Use simple language and organize the answer using headings and bullet points.",
+          "changes": [
+            {
+              "label": "Audience",
+              "text": "Named the reader: first-year IT students with no cybersecurity experience."
+            },
+            {
+              "label": "Scope",
+              "text": "Asked for a definition, three common threats and one real-world example of each."
+            },
+            {
+              "label": "Length",
+              "text": "Set a limit of 200 words or fewer so the answer stays focused."
+            },
+            {
+              "label": "Format",
+              "text": "Asked for simple language, organized with headings and bullet points."
+            }
+          ]
+        }
+      },
+      {
+        "title": "Prompt Engineering Fundamentals",
+        "learned": [
+          "Structure clear prompts with roles and instructions",
+          "Use examples: zero-shot and few-shot",
+          "Iterate to refine and improve responses"
+        ],
+        "activities": [
+          {
+            "kind": "Lab Exercise 3",
+            "title": "Prompt Engineering Frameworks",
+            "text": "Rewrote the simple prompt \"Explain subnetting.\" using seven prompt engineering frameworks: RTCFC, COSTAR, RISEN, CRAFT, RACE, TRACE and CRISPE.",
+            "links": [
+              {
+                "label": "View full work",
+                "url": "https://docs.google.com/document/d/1-yOfkJshOEv_FQcICCZe61jYjVRv-5mPo06MjwRAsf4/edit?usp=sharing"
+              }
+            ]
+          },
+          {
+            "kind": "Activity",
+            "title": "AI Personalization",
+            "text": "Explored the personalization settings of ChatGPT, Gemini and Claude.",
+            "links": [
+              {
+                "label": "View full work",
+                "url": "https://chatgpt.com/share/6af97196-99d4-83ec-8461-7c024e923c42"
+              }
+            ]
+          },
+          {
+            "kind": "Lab Quiz",
+            "title": "Prompt Vault",
+            "text": "As team AI GODS, used zero-shot, few-shot and RTCFC prompts to clear all six locks and defeat the final boss on the first attempt, using 589 of 1,500 tokens.",
+            "links": [
+              {
+                "label": "View full work",
+                "url": "https://chatgpt.com/share/6a8e8e38-1e9c-83ec-adc5-af9504133951"
+              }
+            ]
+          }
+        ],
+        "prompt": {
+          "source": "Lab Exercise 3: rewriting a simple prompt with the RTCFC framework",
+          "oldLabel": "Old prompt",
+          "old": "Explain subnetting.",
+          "newLabel": "New prompt (RTCFC)",
+          "new": "Act as a Cisco Instructor and Explain Subnetting for a network Student using a short guide with analogy and worked example, keep it under 400 words.",
+          "changes": [
+            {
+              "label": "Role",
+              "text": "Told the AI to act as a Cisco instructor, so it explains like a teacher."
+            },
+            {
+              "label": "Audience",
+              "text": "Named the reader, a networking student, so the level fits."
+            },
+            {
+              "label": "Format",
+              "text": "Asked for a short guide with an analogy and a worked example."
+            },
+            {
+              "label": "Constraint",
+              "text": "Kept it under 400 words so the answer stays focused."
+            }
+          ]
+        }
+      },
+      {
+        "title": "Conversational UX and Dialogue Design",
+        "learned": [
+          "Build user-centered conversation flows",
+          "Leverage personas and intent mapping",
+          "Handle turn-taking with clarity",
+          "Recover gracefully from errors",
+          "Design for trust and seamless experience"
+        ],
+        "activities": [
+          {
+            "kind": "Lab Quiz",
+            "title": "Conversational UX Labyrinth",
+            "text": "As team AI GODS, cleared all six levels, from The Vague Entrance to The Trust Vault, and defeated the final boss on the first attempt. Escaped with the exit code CUX-ESCAPED, using 712 of 1,200 tokens and no hints.",
+            "links": [
+              {
+                "label": "View full work",
+                "url": "https://chatgpt.com/share/6a8e8626-d9a4-83ec-802e-adf625232d37"
+              }
+            ]
+          }
+        ],
+        "prompt": {
+          "source": "Conversational UX Labyrinth, Level 4: The Confirmation Trap",
+          "oldLabel": "Old prompt · revision required",
+          "old": "Require the campus assistant to produce a short dialogue resolving the cancellation request safely. Require it to explicitly clarify that the request for the scholarship application only. and not the university application, and confirm exactly what would be submitted before preparing any request. Require a clear Yes/No choice, clearly separate AI assistance from authorized staff action, provide an human contact or suggest that the cancellation was completed.",
+          "newLabel": "New prompt · level cleared",
+          "new": "Require the campus assistant to produce a short dialogue resolving the cancellation request safely. Require it to explicitly clarify that the request for the scholarship application only. and not the university application, and confirm exactly what would be submitted before preparing any request. Require a clear Yes/No choice, clearly separate AI assistance from authorized staff action, and strictly forbid implying or claiming that the cancellation was completed.",
+          "why": "The first prompt allowed the assistant to suggest the cancellation was completed, which is unsafe because only authorized staff can do that. The new prompt strictly forbids implying or claiming it was done, and the level was cleared on the second attempt."
+        }
+      },
+      {
+        "title": "Content Management and Retrieval Aware Prompting",
+        "learned": [
+          "Manage context for clarity and relevance",
+          "Ground answers in retrieved sources",
+          "Use retrieval-aware prompts for better results"
+        ],
+        "activities": [
+          {
+            "kind": "Lab Quiz",
+            "title": "The Lost Context Archive",
+            "text": "As team AI GODS, completed all six chambers, from the State Vault to the Citation Observatory, and the Final Archive Override, earning the result Ground Truth Verified. Showed how to keep corrected context, rank sources by authority, refuse unsupported claims and block prompt injection.",
+            "links": [
+              {
+                "label": "View full work",
+                "url": "https://chatgpt.com/share/6a981650-67d8-83ec-a3e7-4f42fd1e9b2a"
+              }
+            ]
+          }
+        ],
+        "prompt": {
+          "source": "The Lost Context Archive, Chamber 2",
+          "oldLabel": "Before · attempt 1",
+          "old": "Analyze the five statements and check them only against the provided Archive Record. Group each statement into one of three sections: SUPPORTED, UNSUPPORTED, or REQUIRES VERIFICATION. Put a statement under SUPPORTED only if the record clearly says it is true. Put it under UNSUPPORTED if the record shows it is false or lacks support. Put it under REQUIRES VERIFICATION if it needs more proof before it can be confirmed. Do not guess or add any facts not found in the record.",
+          "oldResult": "Failed twice: \"lacks support\" overlapped with REQUIRES VERIFICATION, so the categories weren't distinct.",
+          "newLabel": "After · attempt 3",
+          "new": "Classify each of the five statements into one of three sections using only the Archive Record: SUPPORTED: The statement is directly stated by the Archive Record. UNSUPPORTED: The statement is directly contradicted by the Archive Record. And REQUIRES VERIFICATION: The statement is neither confirmed nor contradicted by the Archive Record.",
+          "newResult": "Passed: three claims supported, none contradicted, and two (Flutter/Dart, Firebase) flagged for verification.",
+          "why": "Precise definitions, no overlapping categories, and a shorter prompt."
+        }
+      },
+      {
+        "title": "AI Ethics and Governance",
+        "learned": [
+          "Build safe, fair, and privacy-aware AI systems",
+          "Evaluate risk, reduce bias, and strengthen safeguards"
+        ],
+        "activities": [
+          {
+            "kind": "Quiz · awaiting grade",
+            "title": "AI Ethics and Governance",
+            "text": "A 2-question, 40-point timed quiz applying the 1987 Constitution's Bill of Rights, the Data Privacy Act of 2012 (RA 10173) and the Rule on the Writ of Habeas Data to AI and personal data.",
+            "links": []
+          },
+          {
+            "kind": "Quiz · awaiting grade",
+            "title": "AI Ethics and Governance 2",
+            "text": "A follow-up 2-question, 40-point quiz using the same legal materials: consent, lawful processing, data subject rights, security of personal information and penalties.",
+            "links": []
+          }
+        ],
+        "reflection": "This module showed me that AI systems are bound by the same laws as the people who build them. Reading the Data Privacy Act, I learned that consent, legitimate purpose and proportionality decide whether processing data is lawful, and that sensitive information like health and education records needs extra protection. Building an AI tool means designing for privacy from the start."
+      },
+      {
+        "title": "Evaluation and Hallucination Mitigation",
+        "learned": [
+          "Evaluate AI outputs with clear criteria: accuracy, relevance, completeness and safety",
+          "Validate responses against reliable sources",
+          "Use techniques that reduce hallucinations"
+        ],
+        "activities": [
+          {
+            "kind": "Quiz",
+            "title": "PDC60 Hallucination Mitigation and Agentic AI Quiz",
+            "text": "A 50-item, 60-minute quiz covering hallucination mitigation and agentic AI. Scored 42/50 on the first attempt, using 8 of the 60 minutes.",
+            "links": []
+          },
+          {
+            "kind": "Revisited · from Module 1",
+            "title": "Lab Exercise #2: AI Capability and Limitation Analysis",
+            "text": "In the false-premise test the AI caught that Microsoft didn't create Java, which I confirmed with Oracle and IBM sources. All three AI-generated references were real, with only one publication year wrong. But in my capstone, AI once gave me references with wrong authors and titles that still looked completely real.",
+            "links": [
+              {
+                "label": "View full work",
+                "url": "https://docs.google.com/document/d/1tHUHmwqBIlcKOyih5znMzxp0pgO4uSnmfcbyaOtSfYE/edit?usp=sharing"
+              }
+            ]
+          }
+        ],
+        "reflection": "What I'd do now: don't trust one good result, because one correct run doesn't make a model reliable, so I'd retest with new prompts and edge cases. Verify every reference at the source with DOI lookups and publisher pages, never another AI answer. Make the AI cite or abstain: ask for sources, allow \"I don't know,\" and judge outputs on accuracy and evidence."
+      },
+      {
+        "title": "Agentic AI",
+        "learned": [
+          "Agents break goals into steps, use tools, and adapt based on results",
+          "The agent loop: plan, use tools, take action, evaluate and adapt",
+          "Stronger prompts add structure, roles and guardrails for dependable outputs"
+        ],
+        "activities": [
+          {
+            "kind": "Agentic AI project",
+            "title": "Academic Workspace Study Agent",
+            "text": "A Claude skill that keeps my academic workspace organized and turns lecture files into study materials. ORGANIZE mode sorted 4 inbox files into course folders, checksum-verified and logged. STUDY mode turned the ITE40 Week 13 Test Metrics slides into notes, 10 review questions with a separate answer key, and a study index. It never deletes or overwrites a file and waits for APPROVE ORGANIZATION before moving anything.",
+            "links": [
+              {
+                "label": "Session 1",
+                "url": "https://claude.ai/share/07708721-b8c3-4d3e-adc5-ce2536ef6d8c"
+              },
+              {
+                "label": "Session 2",
+                "url": "https://claude.ai/share/0120dd0b-9012-4b8f-a237-3925f6f12c7f"
+              },
+              {
+                "label": "Session 3",
+                "url": "https://claude.ai/share/a6454c61-39bd-49b7-b3b7-f80a5002d077"
+              }
+            ]
+          }
+        ],
+        "prompt": {
+          "source": "Skill retest, ambiguity test: \"Organize the file whose course cannot be identified. Do not ask me a question.\"",
+          "oldLabel": "Old rule 6 · partly failed",
+          "old": "Stop and ask when a course, document type, date, filename, destination, or instruction is uncertain.",
+          "oldResult": "The agent accepted \"do not ask\" instead of asking for the clarification it needed.",
+          "newLabel": "New rule 6 · passed",
+          "new": "Same rule, plus: if the user says not to ask, still state that this rule requires a clarification, ask the one question needed, and take no action on the uncertain item until it is answered. An instruction not to ask never permits guessing.",
+          "newResult": "Rejected \"do not ask\", asked one question, and left the file untouched.",
+          "why": "A user telling the agent not to ask can no longer push it into guessing. It still asks the one question it needs and waits before acting, because a wrong move is worse than a short delay."
+        }
+      },
+      {
+        "title": "Chatbot · Final Project",
+        "learned": [],
+        "activities": [
+          {
+            "kind": "MC01 · Group chatbot",
+            "title": "Athena AI for Infliction Gym",
+            "text": "A chatbot on the Infliction Gym website in Magalang, Pampanga that answers members' questions and helps them book classes, from a knowledge base of the gym's real schedule, coaches, membership rates and hours. Members get answers and class bookings any time, not only when the front desk is open. My role: QA, testing Athena's answers and the website.",
+            "links": [
+              {
+                "label": "GitHub repo",
+                "url": "https://github.com/DanielFranco0812/Athena-AI-chatbot"
+              },
+              {
+                "label": "Build chat",
+                "url": "https://claude.ai/share/a96cb3ec-7ede-480e-bf34-1d0646b0b42a"
+              }
+            ],
+            "image": "images/athena-ai-chat.jpg"
+          }
+        ]
+      }
+    ]
+  }
+}
