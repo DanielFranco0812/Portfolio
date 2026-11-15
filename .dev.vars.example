@@ -1,0 +1,4 @@
+# Copy this file to .dev.vars for local testing. Never commit .dev.vars.
+# Fill in one key only.
+GEMINI_API_KEY=
+# ANTHROPIC_API_KEY=
