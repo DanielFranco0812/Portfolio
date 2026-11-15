@@ -16,8 +16,7 @@
   }
 
   const webUrl = (url) => (/^https?:\/\//i.test(url || "") ? url : "");
-  const imageUrl = (url) => (/^(https?:\/\/|\/?images\/)/i.test(url || "") ? url : "");
-  const isPreview = Boolean(window.__CONTENT);
+  const imageUrl = (url) => (/^(https?:\/\/|[\w .\/-]+\.(png|jpe?g|webp|gif)$)/i.test(url || "") ? url : "");
 
   let content;
   try {
@@ -44,7 +43,6 @@
     }
   };
   fillRun($("ticker-track"), content.marquee, 4);
-  fillRun($("outline-track"), [content.banner], 6);
 
   content.stats.forEach((stat) => {
     $("stats").append(el("div", null, el("dt", { text: stat.label }), el("dd", { text: stat.value })));
@@ -159,8 +157,7 @@
   const contact = content.contact;
   $("contact-heading").textContent = contact.heading;
   $("contact-text").textContent = contact.text;
-  $("contact-actions").append(el("button", { class: "pill pill-dark", type: "button", "data-open-chat": "", text: "Ask my AI" }));
-  if (/^[\w.-]+\.pdf$/i.test(contact.cv || "")) $("contact-actions").append(el("a", { class: "pill pill-dark", href: contact.cv, download: "", text: "Download CV" }));
+  if (/^[\w .-]+\.pdf$/i.test(contact.cv || "")) $("contact-actions").append(el("a", { class: "pill pill-dark", href: encodeURI(contact.cv), download: "", text: "Download CV" }));
   if (contact.email) $("contact-actions").append(el("a", { class: "pill pill-line", href: `mailto:${contact.email}`, text: contact.email }));
   if (webUrl(contact.github)) $("contact-actions").append(el("a", { class: "pill pill-line", href: contact.github, target: "_blank", rel: "noopener", text: "GitHub" }));
   if (webUrl(contact.linkedin)) $("contact-actions").append(el("a", { class: "pill pill-line", href: contact.linkedin, target: "_blank", rel: "noopener", text: "LinkedIn" }));
@@ -176,6 +173,88 @@
     }
   });
 
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Bit, the mascot: wanders the page, stops now and then, says hi ---------- */
+  (function roamer() {
+    const say = el("span", { class: "roamer-say" });
+    const body = el("span", { class: "bit roamer-body", "data-bit": "" });
+    const bit = el("div", { class: "roamer", title: "Bit" }, say, body);
+    document.body.append(bit);
+
+    const lines = [
+      "Hi, I'm Bit!",
+      "Daniel built Athena AI. It's under Projects.",
+      "All 8 PDC60 modules are in the course section.",
+      "Daniel's CV is down in Contact.",
+      "Just stretching my legs.",
+      "Looking for a front-end or QA intern?",
+    ];
+    const SIZE = 56;
+    let x = 24, y = window.innerHeight - SIZE - 24;
+    let tx = x, ty = y, pauseUntil = performance.now() + 1200, last = performance.now(), sayTimer;
+
+    function speak(text, ms = 2600) {
+      say.textContent = text;
+      bit.classList.add("talking");
+      clearTimeout(sayTimer);
+      sayTimer = setTimeout(() => bit.classList.remove("talking"), ms);
+    }
+    function bounds() {
+      return { minX: 8, maxX: window.innerWidth - SIZE - 8, minY: 84, maxY: window.innerHeight - SIZE - 12 };
+    }
+    function pickTarget() {
+      const b = bounds();
+      tx = b.minX + Math.random() * Math.max(0, b.maxX - b.minX);
+      ty = b.minY + Math.random() * Math.max(0, b.maxY - b.minY);
+    }
+    function place() {
+      bit.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
+      bit.classList.toggle("say-left", x > window.innerWidth - 240);
+    }
+
+    body.addEventListener("click", () => {
+      bit.classList.remove("hop");
+      void bit.offsetWidth;
+      bit.classList.add("hop");
+      speak(Math.random() < 0.4 ? "Boop!" : lines[Math.floor(Math.random() * lines.length)]);
+    });
+    window.addEventListener("resize", () => {
+      const b = bounds();
+      x = Math.min(Math.max(x, b.minX), b.maxX);
+      y = Math.min(Math.max(y, b.minY), b.maxY);
+      place();
+    });
+
+    place();
+    setTimeout(() => speak(lines[0]), 900);
+    if (reduceMotion) return;
+
+    function step(now) {
+      const dt = Math.min(now - last, 50) / 1000;
+      last = now;
+      if (now >= pauseUntil) {
+        const dx = tx - x, dy = ty - y, dist = Math.hypot(dx, dy);
+        if (dist < 2) {
+          bit.classList.remove("walking");
+          pauseUntil = now + 1500 + Math.random() * 3500;
+          pickTarget();
+          if (Math.random() < 0.35) speak(lines[1 + Math.floor(Math.random() * (lines.length - 1))]);
+        } else {
+          const move = Math.min(dist, 95 * dt);
+          x += (dx / dist) * move;
+          y += (dy / dist) * move;
+          bit.classList.add("walking");
+          bit.classList.toggle("face-left", dx < 0);
+          place();
+        }
+      }
+      requestAnimationFrame(step);
+    }
+    pickTarget();
+    requestAnimationFrame(step);
+  })();
+
   /* ---------- Bit, the mascot: a small block whose eyes watch the pointer ---------- */
   const BIT_SVG = `<svg viewBox="0 0 40 40" aria-hidden="true">
     <rect x="12" y="35" width="5" height="5" fill="#ff00df"/><rect x="23" y="35" width="5" height="5" fill="#ff00df"/>
@@ -187,7 +266,6 @@
   </svg>`;
   document.querySelectorAll("[data-bit]").forEach((bit) => { bit.innerHTML = BIT_SVG; });
 
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!reduceMotion) {
     window.addEventListener("pointermove", (event) => {
       document.querySelectorAll("[data-bit]").forEach((bit) => {
@@ -261,114 +339,4 @@
       }, { passive: true });
     }
   })();
-
-  /* ---------- Chat ---------- */
-  const chat = $("chat"), log = $("chat-log"), input = $("chat-input"), send = $("chat-send");
-  const history = [];
-  let busy = false;
-
-  function addMessage(kind, text, note) {
-    const bubble = el("div", { class: `msg msg-${kind}`, text });
-    if (note) bubble.append(el("span", { class: "msg-note", text: note }));
-    log.append(bubble);
-    log.scrollTop = log.scrollHeight;
-    return bubble;
-  }
-
-  function openChat() {
-    chat.hidden = false;
-    $("chat-launch").hidden = true;
-    input.focus();
-  }
-  function closeChat() {
-    chat.hidden = true;
-    $("chat-launch").hidden = false;
-    $("chat-launch").focus();
-  }
-
-  document.addEventListener("click", (event) => { if (event.target.closest("[data-open-chat]")) openChat(); });
-  $("chat-close").addEventListener("click", closeChat);
-  document.addEventListener("keydown", (event) => { if (event.key === "Escape" && !chat.hidden) closeChat(); });
-
-  addMessage("bot", content.chat.greeting);
-  content.chat.suggestions.forEach((question) => {
-    $("chat-suggest").append(el("button", { type: "button", text: question, "data-ask": question }));
-  });
-  $("chat-suggest").addEventListener("click", (event) => {
-    const question = event.target.getAttribute("data-ask");
-    if (question) ask(question);
-  });
-
-  // Used only until an API key is connected, and always labelled as such.
-  function previewReply(question) {
-    const q = question.toLowerCase();
-    if (/contact|email|hire|reach/.test(q)) {
-      const way = contact.email || contact.linkedin || contact.github;
-      return way ? `You can reach ${content.name} at ${way}.` : "Contact details haven't been added yet.";
-    }
-    if (/skill|stack|tool|language/.test(q)) return `Listed skills: ${content.skills.map((s) => s.title).join("; ")}.`;
-    if (/project|built|build|work/.test(q)) return `Projects on this site: ${content.projects.map((p) => p.title).join("; ")}.`;
-    return `Try asking about ${content.name}'s projects, skills or contact details.`;
-  }
-  const PREVIEW_NOTE = "Preview reply. The AI isn't connected yet.";
-
-  async function fetchReply() {
-    if (isPreview) return { preview: true };
-    let response;
-    try {
-      response = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: history.slice(-10) }),
-      });
-    } catch (error) {
-      return { error: "Couldn't reach the assistant. Check your connection and try again." };
-    }
-    if (response.status === 404) return { preview: true };
-    const data = await response.json().catch(() => ({}));
-    if (data.code === "not_configured") return { preview: true };
-    if (!response.ok) return { error: data.error || "The assistant couldn't answer. Try again in a moment." };
-    return { reply: data.reply };
-  }
-
-  async function ask(question) {
-    const text = question.trim();
-    if (!text || busy) return;
-    busy = true;
-    send.disabled = true;
-    $("chat-suggest").hidden = true;
-    addMessage("user", text);
-    history.push({ role: "user", content: text });
-    input.value = "";
-    input.style.height = "";
-
-    const waiting = el("div", { class: "msg msg-bot msg-wait", "aria-label": "Assistant is typing" }, el("i"), el("i"), el("i"));
-    log.append(waiting);
-    log.scrollTop = log.scrollHeight;
-
-    const result = await fetchReply();
-    waiting.remove();
-
-    if (result.error) {
-      history.pop();
-      addMessage("error", result.error);
-    } else if (result.preview) {
-      history.pop();
-      addMessage("bot", previewReply(text), PREVIEW_NOTE);
-    } else {
-      history.push({ role: "assistant", content: result.reply });
-      addMessage("bot", result.reply);
-    }
-    busy = false;
-    send.disabled = false;
-  }
-
-  $("chat-form").addEventListener("submit", (event) => { event.preventDefault(); ask(input.value); });
-  input.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); ask(input.value); }
-  });
-  input.addEventListener("input", () => {
-    input.style.height = "auto";
-    input.style.height = `${input.scrollHeight + 2}px`;
-  });
 })();
