@@ -32,7 +32,6 @@
     "Quality assurance",
     "Prompt engineering"
   ],
-  "banner": "Ask my AI about my work",
   "projects": [
     {
       "title": "Athena AI",
@@ -140,15 +139,6 @@
     "github": "https://github.com/DanielFranco0812",
     "linkedin": "https://www.linkedin.com/in/daniel-jehd-franco-62a29028a/",
     "cv": "Daniel_Jehd_Franco_CV.pdf"
-  },
-  "chat": {
-    "greeting": "Hi, I'm Daniel's portfolio assistant. Ask me about his projects and skills.",
-    "suggestions": [
-      "What has Daniel built?",
-      "What did he learn in PDC60?",
-      "What is Athena AI?"
-    ],
-    "extraNotes": "Hobbies: movies, video games, outdoor activities, UI/UX design and hardware troubleshooting."
   },
   "course": {
     "code": "PDC60",
