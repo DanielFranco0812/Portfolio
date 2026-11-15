@@ -46,7 +46,7 @@
       "details": "Final project for PDC60 (MC01, group chatbot), built by a team of four on free tools and free tiers. Athena answers from a knowledge base of the gym's real schedule, coaches, membership rates and hours, and links new members to registration. Members get answers and class bookings any time, not only when the front desk is open. Daniel's role was QA: testing Athena's answers and the website.",
       "url": "",
       "repo": "https://github.com/DanielFranco0812/Athena-AI-chatbot",
-      "image": "images/athena-ai-website.jpg"
+      "image": "images/Screenshot 2026-11-15 172541.png"
     },
     {
       "title": "Academic Workspace Study Agent",
@@ -461,7 +461,7 @@
                 "url": "https://claude.ai/share/a96cb3ec-7ede-480e-bf34-1d0646b0b42a"
               }
             ],
-            "image": "images/athena-ai-chat.jpg"
+            "image": "images/Screenshot 2026-11-15 172522.png"
           }
         ]
       }
